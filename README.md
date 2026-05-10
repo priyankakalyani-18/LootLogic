@@ -2,180 +2,64 @@
 
 ### Statistical Analysis of Gacha & Loot Box Systems Using Monte Carlo Simulation in R
 
-LootLogic is a simulation-based statistical analysis project developed in R to study the probability mechanics, fairness, and player spending behavior behind modern gacha and loot box systems used in popular video games.
+**LootLogic** is a simulation-based statistical tool developed to study the probability mechanics, fairness, and player spending behavior behind randomized reward systems (Gacha/Loot Boxes) in modern video games.
 
-Using Monte Carlo Simulation techniques, this project models thousands of virtual player pulls to analyze rare-item acquisition probabilities, pity systems, expected spending patterns, and overall reward fairness.
-
----
-
-# 🎮 Project Overview
-
-Modern games increasingly rely on probability-driven reward systems where players spend in-game currency or real money for randomized rewards such as characters, weapons, skins, or cosmetic items.
-
-While these systems appear simple, the underlying probabilities and reward mechanics can significantly affect player experience and spending behavior.
-
-LootLogic aims to statistically analyze these mechanics through simulation and visualization using R programming.
+By running thousands of virtual trials, the application approximates real-world outcomes to help users understand the effectiveness of "pity systems" and the true cost of rare-item acquisition.
 
 ---
 
-# 🎯 Objectives
+## 🚀 Live Application
 
-* Simulate gacha and loot box pull systems
-* Analyze rare-item acquisition probabilities
-* Study pity system effectiveness
-* Estimate expected player spending
-* Visualize player luck distributions
-* Compare different reward system designs
-* Demonstrate Monte Carlo Simulation using R
+**[View the Live Dashboard on Shinyapps.io](https://priyankakalyani.shinyapps.io/LootLogic/)**
 
 ---
 
-# 🧠 Key Concepts
+## 📸 Preview
 
-* Probability Theory
-* Monte Carlo Simulation
-* Statistical Modeling
-* Data Visualization
-* Random Sampling
-* Expected Value Analysis
-* Distribution Analysis
+
+*(Note: Replace 'screenshot.png' with the actual filename of the image you upload to your repository)*
 
 ---
 
-# ⚙️ Features
+## 🛠️ Project Requirements (Project 4)
 
-✅ Rare-item pull simulation
-✅ Configurable probability systems
-✅ Pity system implementation
-✅ Spending estimation analysis
-✅ Multiple-player simulation
-✅ Statistical summary generation
-✅ Data visualization using ggplot2
-✅ Reward fairness analysis
+This application was built using **R Shiny** and fulfills the following technical criteria:
 
----
-
-# 🛠️ Technologies Used
-
-| Technology          | Purpose                              |
-| ------------------- | ------------------------------------ |
-| R                   | Core programming language            |
-| ggplot2             | Data visualization                   |
-| dplyr               | Data manipulation                    |
-| tidyr               | Data cleaning                        |
-| purrr               | Functional programming & simulations |
-| plotly *(optional)* | Interactive visualizations           |
-| shiny *(optional)*  | Interactive dashboard                |
+* **Sidebar Layout:** Features a professional `sidebarLayout` for parameter adjustment.
+* **Interactive Controls:** Includes multiple user inputs, such as `sliderInput` for probabilities and `numericInput` for simulation size and pity thresholds.
+* **Reactive Logic:** Implements a `reactive()` expression to handle the heavy Monte Carlo simulations separately from the rendering logic, ensuring a smooth user experience.
+* **HTML Integration:** Uses native R Shiny HTML functions (`h3`, `h4`, `h5`, `p`, `hr`) for structured documentation and interface design.
+* **Live Deployment:** Successfully hosted on the public `shinyapps.io` server.
 
 ---
 
-# 📊 Example Analyses
+## 🧠 Methodology: Monte Carlo Simulation
 
-LootLogic can answer questions such as:
+The core of LootLogic is a Monte Carlo simulation. It models 1,000+ independent player sessions simultaneously. For each player, the script:
 
-* How many pulls are typically required to obtain a rare item?
-* What is the probability of success after 50, 70, or 90 pulls?
-* How does a pity system affect player outcomes?
-* What is the average amount spent before obtaining a high-rarity reward?
-* Which reward systems are statistically more player-friendly?
-
----
-
-# 🎲 Example Simulation Scenario
-
-| Parameter             | Value    |
-| --------------------- | -------- |
-| Rare Item Probability | 0.6%     |
-| Pity Threshold        | 90 Pulls |
-| Cost Per Pull         | $2       |
-| Simulated Players     | 10,000   |
+1. Generates random numbers to simulate individual "pulls."
+2. Checks against the base success probability.
+3. Applies a "Pity System" hard-cap if the player reaches a specific threshold without success.
+4. Aggregates the data to show the average, median, and extreme "luck" outcomes.
 
 ---
 
-# 📈 Visualizations Included
-
-* Pull distribution histograms
-* Probability progression curves
-* Spending distribution boxplots
-* Player luck density plots
-* Comparative fairness visualizations
-
----
-
-# 🧪 Monte Carlo Simulation
-
-Monte Carlo Simulation is used to repeatedly simulate thousands of independent player sessions in order to estimate real-world probability outcomes and spending behavior.
-
-This allows LootLogic to approximate:
-
-* Expected pulls before success
-* Spending variability
-* Probability distributions
-* Player success likelihood
-* Reward fairness trends
-
----
-
-# 📂 Project Structure
+## 📂 Repository Structure
 
 ```bash
 LootLogic/
-│
-├── data/
-│
-├── scripts/
-│   ├── simulation.R
-│   ├── pity_system.R
-│   ├── analysis.R
-│   └── visualization.R
-│
-├── outputs/
-│   ├── graphs/
-│   └── reports/
-│
-├── app.R
-├── README.md
-└── LICENSE
+├── app.R           # Core Shiny application code
+├── README.md        # Project documentation
+└── screenshot.png   # Visual preview of the app
+
 ```
 
 ---
 
-# 🚀 Future Improvements
+## 👩‍💻 Author
 
-* Interactive Shiny dashboard
-* Multi-game comparison system
-* Real-world gaming dataset integration
-* Advanced reward balancing analysis
-* Player behavior modeling
-* AI-driven pull strategy simulation
+**Priyanka Kalyani** MSCA Doctoral Candidate (DC5)
 
----
-
-# 🎓 Academic Relevance
-
-LootLogic demonstrates the practical application of statistical simulation and data analysis techniques in understanding modern probability-based gaming systems.
-
-The project combines:
-
-* statistics
-* simulation modeling
-* visualization
-* programming logic
-* analytical reasoning
-
-within an engaging gaming-focused context.
-
----
-
-# 📜 License
-
-This project is intended for educational and academic purposes.
-
----
-
-# 👩‍💻 Author
-
-Priyanka Kalyani
-MSCA Doctoral Candidate (DC5)
 Warsaw University of Technology
-Machine Learning & Structural Health Monitoring Researcher
+
+*Machine Learning & Structural Health Monitoring Researcher*
